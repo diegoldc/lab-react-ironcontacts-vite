@@ -70,12 +70,12 @@ function App() {
   return (
     <div className="App">
       <h1>LAB | React IronContacts</h1>
-      <div style={{ marginBottom: "20px" }}>
-        <button onClick={handleAddContact} style={{ backgroundColor: "darkgray" }}>
+      <div className="botones">
+        <button onClick={handleAddContact}>
           Add Random Contact
         </button>
-        <button onClick={handleSortByName} style={{ backgroundColor: "darkgray" }}>Sort by name</button>
-        <button onClick={handleSortByPopularity} style={{ backgroundColor: "darkgray" }}>Sort by popularity</button>
+        <button onClick={handleSortByName}>Sort by name</button>
+        <button onClick={handleSortByPopularity} >Sort by popularity</button>
       </div>
       <table>
         <thead>
@@ -102,7 +102,7 @@ function App() {
               <td>{contact.wonOscar === true ? "🏆" : null}</td>
               <td>{contact.wonEmmy === true ? "🌟" : null}</td>
               <td>
-                <button onClick={() => handleDeleteContact(contact.id)}>Delete</button>
+                <button onClick={() => handleDeleteContact(contact.id)} style={{backgroundColor: "lightcoral"}}>Delete</button>
               </td>
             </tr>
           ))}
